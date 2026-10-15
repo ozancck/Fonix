@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 enum AppColor: String, CaseIterable {
-    case gray0 = "#FFFFF2"
+    case gray0 = "#FFFFFF"
     case gray10 = "#F1F5F9"
     case gray20 = "#E2E8F0"
     case gray30 = "#CBD5E1"
@@ -35,8 +35,7 @@ enum AppColor: String, CaseIterable {
     case destructive60 = "#DC2626"
     case destructive90 = "#7F1D1D"
 
-    case white = "#FFFFFF"
     case black = "#000000"
-
+    static var white: AppColor { .gray0 }
     var uiColor: UIColor { UIColor(hex: rawValue) }
 }
