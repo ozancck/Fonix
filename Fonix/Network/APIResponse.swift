@@ -17,8 +17,8 @@ enum APIError: Error, Equatable {
     case invalidURL
     case encoding(String)
     case transport(String)
-    case httpStatus(Int)
     case server(String)
     case decoding(String)
     case emptyData
+    case httpStatus(Int)
 }

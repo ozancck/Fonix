@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "message": null,
+  "data": [
+    {
+      "favorite_asset_id": "fav-AFT",
+      "user_id": "42",
+      "asset_id": "1",
+      "asset_code": "AFT",
+      "asset_type": "fund",
+      "asset_title": "AFT",
+      "asset_long_title": "Ak Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu",
+      "asset_sub_title": "Ak Portföy",
+      "asset_price": "48.213456",
+      "asset_ratio": "2.14",
+      "detail": {
+        "fund_id": "1",
+        "fund_code": "AFT",
+        "fund_title": "Ak Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu",
+        "fund_title_link": "",
+        "fund_founder_id": "10",
+        "fund_type": "Hisse Senedi Şemsiye Fonu",
+        "active": "1"
+      }
+    },
+    {
+      "favorite_asset_id": "fav-YAY",
+      "user_id": "42",
+      "asset_id": "4",
+      "asset_code": "YAY",
+      "asset_type": "fund",
+      "asset_title": "YAY",
+      "asset_long_title": "Yapı Kredi Portföy Altın Fonu",
+      "asset_sub_title": "Yapı Kredi Portföy",
+      "asset_price": "0.912377",
+      "asset_ratio": "1.42",
+      "detail": {
+        "fund_id": "4",
+        "fund_code": "YAY",
+        "fund_title": "Yapı Kredi Portföy Altın Fonu",
+        "fund_title_link": "",
+        "fund_founder_id": "12",
+        "fund_type": "Kıymetli Madenler Şemsiye Fonu",
+        "active": "1"
+      }
+    }
+  ]
+}

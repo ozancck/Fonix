@@ -1,3 +1,7 @@
 "ok" = "Tamam";
 "error_title" = "Hata";
 "home" = "Ana Sayfa";
+"tab_home" = "Ana Sayfa";
+"tab_portfolio" = "Portföy";
+"tab_explore" = "Keşfet";
+"tab_profile" = "Profil";

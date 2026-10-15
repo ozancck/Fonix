@@ -19,6 +19,12 @@ private struct PingRequest: APIRequest {
     var parameters: [String: Any] { ["server_key": "x"] }
 }
 
+private struct DebugRequest: APIRequest {
+    typealias Response = Ping
+    let path = "ping"
+    var queryItems: [String: String] { ["_status": "500"] }
+}
+
 private struct ListRequest: APIRequest {
     typealias Response = Ping
     let path = "list"
@@ -93,5 +99,11 @@ final class URLSessionNetworkClientTests: XCTestCase {
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.url?.absoluteString, "https://example.test/list?page=2&q=fon")
         XCTAssertNil(request.httpBody)
+    }
+
+    func test_makeURLRequest_appendsQueryItems_onPost() throws {
+        let request = try client.makeURLRequest(for: DebugRequest())
+        XCTAssertEqual(request.url?.absoluteString, "https://example.test/ping?_status=500")
+        XCTAssertEqual(request.httpMethod, "POST")
     }
 }
