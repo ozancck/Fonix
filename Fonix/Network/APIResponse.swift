@@ -20,5 +20,5 @@ enum APIError: Error, Equatable {
     case server(String)
     case decoding(String)
     case emptyData
-    case httpStatus(Int)
+    case httpStatus(Int, String?)
 }

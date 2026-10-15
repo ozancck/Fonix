@@ -75,7 +75,7 @@ final class URLSessionNetworkClientTests: XCTestCase {
             _ = try await client.send(PingRequest())
             XCTFail("hata beklenirdi")
         } catch let error as APIError {
-            XCTAssertEqual(error, .httpStatus(500))
+            XCTAssertEqual(error, .httpStatus(500, nil))
         } catch {
             XCTFail("APIError beklenirdi, gelen: \(error)")
         }

@@ -31,6 +31,7 @@ final class URLSessionNetworkClient: NetworkClient {
     func send<R: APIRequest>(_ request: R) async throws -> R.Response {
         let urlRequest = try makeURLRequest(for: request)
         AppLog.verbose("→ \(request.method.rawValue) \(request.path) \(request.parameters)")
+      
 
         let data: Data
         let response: URLResponse
@@ -45,7 +46,8 @@ final class URLSessionNetworkClient: NetworkClient {
         }
         guard (200..<300).contains(http.statusCode) else {
             let message = (try? decoder.decode(APIEnvelope<EmptyResponse>.self, from: data))?.message
-            throw APIError.httpStatus(http.statusCode)
+            AppLog.verbose("← \(http.statusCode) \(request.path) \(data.count) bayt")
+            throw APIError.httpStatus(http.statusCode, message)
         }
 
         let envelope: APIEnvelope<R.Response>

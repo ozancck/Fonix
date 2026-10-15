@@ -62,7 +62,7 @@ final class FundServiceTests: XCTestCase {
             _ = try await service.homeData()
             XCTFail("hata beklenirdi")
         } catch let error as APIError {
-            XCTAssertEqual(error, .httpStatus(404))
+            XCTAssertEqual(error, .httpStatus(404, "Fon bulunamadı"))
         } catch {
             XCTFail("APIError beklenirdi: \(error)")
         }
