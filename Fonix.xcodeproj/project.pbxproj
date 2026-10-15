@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 110;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -157,11 +157,10 @@
 				Base,
 			);
 			mainGroup = AB0A8EB73080BAC800721779;
-			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				AB0A8F723080C4A300721779 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = AB0A8EC13080BAC800721779 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -498,5 +497,4 @@
 /* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB0A8EB83080BAC800721779 /* Project object */;
-	validationLevel = 1;
 }
