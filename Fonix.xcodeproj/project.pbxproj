@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB0A8F743080C4A300721779 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = AB0A8F733080C4A300721779 /* SDWebImage */; };
+		AB0A90703080F44400721779 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = AB0A906F3080F44400721779 /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			files = (
 				AB0A8F743080C4A300721779 /* SDWebImage in Frameworks */,
+				AB0A90703080F44400721779 /* Swinject in Frameworks */,
 			);
 		};
 		AB0A8ED33080BACA00721779 /* Frameworks */ = {
@@ -104,6 +106,7 @@
 			name = Fonix;
 			packageProductDependencies = (
 				AB0A8F733080C4A300721779 /* SDWebImage */,
+				AB0A906F3080F44400721779 /* Swinject */,
 			);
 			productName = Fonix;
 			productReference = AB0A8EC03080BAC800721779 /* Fonix.app */;
@@ -159,6 +162,7 @@
 			mainGroup = AB0A8EB73080BAC800721779;
 			packageReferences = (
 				AB0A8F723080C4A300721779 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				AB0A906E3080F44400721779 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = AB0A8EC13080BAC800721779 /* Products */;
@@ -488,6 +492,14 @@
 				minimumVersion = 5.21.7;
 			};
 		};
+		AB0A906E3080F44400721779 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -495,6 +507,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB0A8F723080C4A300721779 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		AB0A906F3080F44400721779 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB0A906E3080F44400721779 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

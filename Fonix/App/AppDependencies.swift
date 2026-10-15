@@ -6,9 +6,18 @@
 //
 
 import Foundation
+import Swinject
 
-struct AppDependencies {
+final class AppDependencies {
+    private let assembler: Assembler
+
+    var resolver: Resolver { assembler.resolver }
+
+    init(assemblies: [Assembly] = []) {
+        assembler = Assembler(assemblies)
+    }
+
     static func live() -> AppDependencies {
-        AppDependencies()
+        AppDependencies(assemblies: [NetworkAssembly()])
     }
 }
