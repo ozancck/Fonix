@@ -1,0 +1,22 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Simülatör seç
+        run: |
+          DEVICE=$(xcrun simctl list devices available | grep -m1 -oE "iPhone [0-9]+[^(]*" | xargs)
+          echo "DEVICE=$DEVICE" >> "$GITHUB_ENV"
+      - name: Build ve test
+        run: |
+          xcodebuild test \
+            -project Fonix.xcodeproj \
+            -scheme Fonix \
+            -destination "platform=iOS Simulator,name=$DEVICE" \
+            CODE_SIGNING_ALLOWED=NO | xcpretty && exit ${PIPESTATUS[0]}
