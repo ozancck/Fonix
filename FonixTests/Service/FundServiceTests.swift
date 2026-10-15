@@ -42,6 +42,7 @@ final class FundServiceTests: XCTestCase {
         XCTAssertEqual(earners.count, 5)
         XCTAssertEqual(earners.first?.assetCode, "MAC")
         XCTAssertEqual(earners.first?.ratio, 3.05)
+        XCTAssertNotNil(earners.first?.imageURL)
         XCTAssertTrue(earners.first?.isGain ?? false)
     }
 

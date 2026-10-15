@@ -1,10 +1,3 @@
-//
-//  HomeData.swift
-//  Fonix
-//
-//  Created by Ozan on 15.10.2026.
-//
-
 import Foundation
 
 struct HomeData: Decodable, Equatable {
@@ -22,7 +15,10 @@ struct UserAsset: Decodable, Equatable {
     let assetType: String
     let totalAmount: Double
     let totalPercentage: Double
+    let assetTypeIcon: String?
     let items: [UserAssetItem]
+
+    var iconURL: URL? { assetTypeIcon.flatMap(URL.init) }
 }
 
 struct UserAssetItem: Decodable, Equatable {
@@ -32,6 +28,7 @@ struct UserAssetItem: Decodable, Equatable {
     let assetType: String
     let quantity: String
     let timestamp: String
+    let assetImage: String?
 
     var quantityValue: Double? { Double(quantity) }
 }

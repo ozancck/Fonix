@@ -1,12 +1,4 @@
-//
-//  FavoriteAsset.swift
-//  Fonix
-//
-//  Created by Ozan on 15.10.2026.
-//
-
 import Foundation
-
 
 struct FavoriteAsset: Decodable, Equatable {
     let favoriteAssetId: String
@@ -19,6 +11,7 @@ struct FavoriteAsset: Decodable, Equatable {
     let assetSubTitle: String
     let assetPrice: String
     let assetRatio: String
+    let assetImage: String?
     let detail: FundSummary?
 
     var summary: AssetSummary {
@@ -29,7 +22,8 @@ struct FavoriteAsset: Decodable, Equatable {
                      assetLongTitle: assetLongTitle,
                      assetSubTitle: assetSubTitle,
                      assetPrice: assetPrice,
-                     assetRatio: assetRatio)
+                     assetRatio: assetRatio,
+                     assetImage: assetImage)
     }
 }
 

@@ -11,6 +11,7 @@
       "asset_title": "AFT",
       "asset_long_title": "Ak Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu",
       "asset_sub_title": "Ak Portföy",
+      "asset_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Akbank_logo_2025.svg/330px-Akbank_logo_2025.svg.png",
       "asset_price": "48.213456",
       "asset_ratio": "2.14",
       "detail": {
@@ -32,6 +33,7 @@
       "asset_title": "YAY",
       "asset_long_title": "Yapı Kredi Portföy Altın Fonu",
       "asset_sub_title": "Yapı Kredi Portföy",
+      "asset_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Yap%C4%B1_kredi_logo.png/330px-Yap%C4%B1_kredi_logo.png",
       "asset_price": "0.912377",
       "asset_ratio": "1.42",
       "detail": {

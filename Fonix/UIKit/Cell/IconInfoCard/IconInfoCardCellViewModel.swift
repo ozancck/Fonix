@@ -34,6 +34,7 @@ final class IconInfoCardCellViewModel: BaseCellViewModel {
         super.init()
         contentInset = UIEdgeInsets(top: 0, left: AppConstants.Margin2x,
                                     bottom: AppConstants.Marginx, right: AppConstants.Margin2x)
+    
     }
 
     override func clearViewModel() {
