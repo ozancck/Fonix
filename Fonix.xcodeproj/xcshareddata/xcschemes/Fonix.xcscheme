@@ -39,16 +39,6 @@
                ReferencedContainer = "container:Fonix.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB0A8EDF3080BACA00721779"
-               BuildableName = "FonixUITests.xctest"
-               ReferencedContainer = "container:Fonix.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
