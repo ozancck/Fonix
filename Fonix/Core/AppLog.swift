@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Foundation
 
 enum AppLog {
     static func verbose(_ message: String) {
