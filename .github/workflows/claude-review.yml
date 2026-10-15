@@ -1,7 +1,7 @@
 name: Claude Review
 on:
   pull_request:
-    types: [opened, ready_for_review]
+    types: [opened, reopened, ready_for_review]
   issue_comment:
     types: [created]
 
@@ -21,8 +21,12 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_QAUTH_TOKEN }}
+          claude_args: '--allowed-tools "Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),mcp__github_inline_comment__create_inline_comment"'
           prompt: |
+            PR numarası: ${{ github.event.pull_request.number }}
             Bu PR'ı incele. Repoda CLAUDE.md varsa oradaki kuralları esas al.
             Mimari sapmaları, eksik testleri, isimlendirme hatalarını ve
             olası çalışma zamanı hatalarını yaz. Sorun yoksa kısaca söyle.
+            Satıra bağlı notlar için inline comment aracını kullan.
+            Genel değerlendirmeyi mutlaka `gh pr comment` ile PR'a yorum olarak gönder.
             Türkçe yaz.
