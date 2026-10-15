@@ -5,15 +5,16 @@ on:
   issue_comment:
     types: [created]
 
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+  id-token: write
+
 jobs:
   review:
-    if: github.event_name == 'pull_request' || contains(github.event.comment.body, '@claude')
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-      issues: write
-      id-token: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,3 +31,14 @@ jobs:
             Satıra bağlı notlar için inline comment aracını kullan.
             Genel değerlendirmeyi mutlaka `gh pr comment` ile PR'a yorum olarak gönder.
             Türkçe yaz.
+
+  mention:
+    if: github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_QAUTH_TOKEN }}
