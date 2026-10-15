@@ -18,6 +18,7 @@ final class AppDependencies {
     }
 
     static func live() -> AppDependencies {
-        AppDependencies(assemblies: [NetworkAssembly()])
+        AppDependencies(assemblies: [NetworkAssembly(),
+                                    ServiceAssembly()])
     }
 }

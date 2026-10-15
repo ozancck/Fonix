@@ -23,9 +23,9 @@ final class AppCoordinator: Coordinator {
     }
 
     func start() {
-        let controller = UIViewController()
-        controller.view.backgroundColor = .systemBackground
-        controller.title = "Fonix"
-        navigationController.setViewControllers([controller], animated: false)
+        let dashboard = DashboardCoordinator(navigationController: navigationController,
+                                             dependencies: dependencies)
+        addChild(dashboard)
+        dashboard.start()
     }
 }

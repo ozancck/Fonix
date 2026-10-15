@@ -24,8 +24,8 @@ enum AppEnvironment {
     /// Dummy backend'in adresi. Gerçek sunucu gelince production değişir.
     var baseURL: URL {
         switch self {
-        case .development: return URL(string: "http://localhost:3000/")!
-        case .production: return URL(string: "https://api.fonix.app/")!
+        case .development: return URL(string: "https://fonix-mock-api.ozancck.workers.dev/")!
+        case .production: return URL(string: "https://fonix-mock-api.ozancck.workers.dev/")!
         }
     }
 }

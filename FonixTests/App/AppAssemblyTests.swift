@@ -16,6 +16,7 @@ final class AppAssemblyTests: XCTestCase {
 
         XCTAssertNotNil(dependencies.resolver.resolve(AppSession.self))
         XCTAssertNotNil(dependencies.resolver.resolve(NetworkClient.self))
+        XCTAssertNotNil(dependencies.resolver.resolve(FundServicing.self))
     }
 
     func test_appSession_isSingleton() {

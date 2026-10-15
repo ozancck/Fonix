@@ -1,0 +1,79 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "total_amount": 184250.75,
+    "user_portfolios": [
+      {
+        "portfolio_id": "p1",
+        "portfolio_title": "Uzun Vade"
+      },
+      {
+        "portfolio_id": "p2",
+        "portfolio_title": "Emeklilik"
+      }
+    ],
+    "user_assets": [
+      {
+        "asset_type": "fund",
+        "asset_type_icon": "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4c8.png",
+        "total_amount": 121400.5,
+        "total_percentage": 65.9,
+        "items": [
+          {
+            "product_id": "u1",
+            "user_id": "42",
+            "asset_code": "AFT",
+            "asset_type": "fund",
+            "quantity": "1250",
+            "timestamp": "2026-09-02T09:15:00Z",
+            "asset_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Akbank_logo_2025.svg/330px-Akbank_logo_2025.svg.png"
+          },
+          {
+            "product_id": "u2",
+            "user_id": "42",
+            "asset_code": "IPJ",
+            "asset_type": "fund",
+            "quantity": "5000",
+            "timestamp": "2026-09-20T10:00:00Z",
+            "asset_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg/330px-T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg.png"
+          }
+        ]
+      },
+      {
+        "asset_type": "gold",
+        "asset_type_icon": "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1fa99.png",
+        "total_amount": 42850.25,
+        "total_percentage": 23.3,
+        "items": [
+          {
+            "product_id": "u3",
+            "user_id": "42",
+            "asset_code": "XAU/USD",
+            "asset_type": "gold",
+            "quantity": "12.5",
+            "timestamp": "2026-08-11T13:40:00Z",
+            "asset_image": "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1fa99.png"
+          }
+        ]
+      },
+      {
+        "asset_type": "currency",
+        "asset_type_icon": "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4b5.png",
+        "total_amount": 20000,
+        "total_percentage": 10.8,
+        "items": [
+          {
+            "product_id": "u4",
+            "user_id": "42",
+            "asset_code": "USD/TRY",
+            "asset_type": "currency",
+            "quantity": "480",
+            "timestamp": "2026-10-01T08:00:00Z",
+            "asset_image": "https://flagcdn.com/w160/us.png"
+          }
+        ]
+      }
+    ]
+  }
+}

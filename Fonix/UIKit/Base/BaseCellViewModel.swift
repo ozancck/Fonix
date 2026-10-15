@@ -15,7 +15,10 @@ protocol CellReloading: AnyObject {
 
 struct CellSeparator {
     var color: UIColor = AppColor.gray70.uiColor
-    var inset = UIEdgeInsets(top: 0, left: AppConstants.Margin2x, bottom: 0, right: AppConstants.Margin2x)
+    var inset = UIEdgeInsets(top: 0,
+                             left: AppConstants.Margin2x,
+                             bottom: 0,
+                             right: AppConstants.Margin2x)
 }
 
 class BaseCellViewModel: NSObject {

@@ -31,6 +31,7 @@ final class URLSessionNetworkClient: NetworkClient {
     func send<R: APIRequest>(_ request: R) async throws -> R.Response {
         let urlRequest = try makeURLRequest(for: request)
         AppLog.verbose("→ \(request.method.rawValue) \(request.path) \(request.parameters)")
+      
 
         let data: Data
         let response: URLResponse
@@ -44,7 +45,9 @@ final class URLSessionNetworkClient: NetworkClient {
             throw APIError.transport("HTTP yanıtı değil")
         }
         guard (200..<300).contains(http.statusCode) else {
-            throw APIError.httpStatus(http.statusCode)
+            let message = (try? decoder.decode(APIEnvelope<EmptyResponse>.self, from: data))?.message
+            AppLog.verbose("← \(http.statusCode) \(request.path) \(data.count) bayt")
+            throw APIError.httpStatus(http.statusCode, message)
         }
 
         let envelope: APIEnvelope<R.Response>
@@ -72,11 +75,20 @@ final class URLSessionNetworkClient: NetworkClient {
                                              resolvingAgainstBaseURL: false) else {
             throw APIError.invalidURL
         }
-        if request.method == .get, !request.parameters.isEmpty {
-            components.queryItems = request.parameters
-                .map { URLQueryItem(name: $0.key, value: "\($0.value)") }
-                .sorted { $0.name < $1.name }
+        
+        
+        var items = request.queryItems.map { URLQueryItem(name: $0.key, value: $0.value) }
+
+        if request.method == .get {
+            items += request.parameters.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
         }
+        
+        if !items.isEmpty {
+            components.queryItems = items.sorted { $0.name < $1.name }
+        }
+        
+        
+        
         guard let url = components.url else { throw APIError.invalidURL }
 
         var urlRequest = URLRequest(url: url)

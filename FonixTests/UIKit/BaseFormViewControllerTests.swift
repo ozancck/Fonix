@@ -40,4 +40,16 @@ final class BaseFormViewControllerTests: XCTestCase {
         XCTAssertEqual(controller.viewModels.count, 3)
         XCTAssertEqual(controller.headerStack.arrangedSubviews.count, 1)
     }
+    
+    func test_tableView_fillsHeight_insideTabBar() {
+        let controller = SampleFormViewController()
+        let tabs = UITabBarController()
+        tabs.viewControllers = [UINavigationController(rootViewController: controller)]
+        let window = UIWindow(frame: CGRect(x: 0, y: 0, width: 390, height: 844))
+        window.rootViewController = tabs
+        window.makeKeyAndVisible()
+        controller.view.layoutIfNeeded()
+
+        XCTAssertGreaterThan(controller.tableView.frame.height, 300)
+    }
 }

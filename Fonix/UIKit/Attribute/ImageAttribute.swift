@@ -37,7 +37,7 @@ final class ImageAttribute {
             let image = AppImage.named(name)
             imageView.image = tintColor == nil ? image : image?.withRenderingMode(.alwaysTemplate)
         case .remote(let url):
-            imageView.sd_setImage(with: url)
+            imageView.sd_setImage(with: url, placeholderImage: AppImage.named("CryptoLogo"))
         case nil:
             imageView.image = nil
         }

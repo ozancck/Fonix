@@ -102,7 +102,17 @@ class BaseFormViewController: BaseViewController {
         tableView.keyboardDismissMode = .interactive
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.setContentHuggingPriority(.defaultLow, for: .vertical)
+        tableView.setContentCompressionResistancePriority(.required, for: .vertical)
+        headerStack.setContentHuggingPriority(.required, for: .vertical)
+        footerStack.setContentHuggingPriority(.required, for: .vertical)
 
+        for stack in [headerStack, footerStack] {
+            let zero = stack.heightAnchor.constraint(equalToConstant: 0)
+            zero.priority = .defaultLow
+            zero.isActive = true
+        }
+        
         let container = UIStackView(arrangedSubviews: [headerStack, tableView, footerStack])
         container.axis = .vertical
         view.addSubview(container)

@@ -1,0 +1,61 @@
+{
+  "success": true,
+  "message": null,
+  "data": [
+    {
+      "asset_id": "6",
+      "asset_code": "MAC",
+      "asset_type": "fund",
+      "asset_title": "MAC",
+      "asset_long_title": "Marmara Capital Hisse Senedi Fonu",
+      "asset_sub_title": "Marmara Capital",
+      "asset_image": "https://www.marmaracapital.com.tr/wp-content/uploads/logo.png",
+      "asset_price": "7.115320",
+      "asset_ratio": "3.05"
+    },
+    {
+      "asset_id": "1",
+      "asset_code": "AFT",
+      "asset_type": "fund",
+      "asset_title": "AFT",
+      "asset_long_title": "Ak Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu",
+      "asset_sub_title": "Ak Portföy",
+      "asset_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Akbank_logo_2025.svg/330px-Akbank_logo_2025.svg.png",
+      "asset_price": "48.213456",
+      "asset_ratio": "2.14"
+    },
+    {
+      "asset_id": "4",
+      "asset_code": "YAY",
+      "asset_type": "fund",
+      "asset_title": "YAY",
+      "asset_long_title": "Yapı Kredi Portföy Altın Fonu",
+      "asset_sub_title": "Yapı Kredi Portföy",
+      "asset_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Yap%C4%B1_kredi_logo.png/330px-Yap%C4%B1_kredi_logo.png",
+      "asset_price": "0.912377",
+      "asset_ratio": "1.42"
+    },
+    {
+      "asset_id": "5",
+      "asset_code": "GAF",
+      "asset_type": "fund",
+      "asset_title": "GAF",
+      "asset_long_title": "Garanti Portföy Eurobond Borçlanma Araçları Fonu",
+      "asset_sub_title": "Garanti Portföy",
+      "asset_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Garanti_BBVA_2019.svg/330px-Garanti_BBVA_2019.svg.png",
+      "asset_price": "0.058214",
+      "asset_ratio": "0.35"
+    },
+    {
+      "asset_id": "3",
+      "asset_code": "IPJ",
+      "asset_type": "fund",
+      "asset_title": "IPJ",
+      "asset_long_title": "İş Portföy Para Piyasası Fonu",
+      "asset_sub_title": "İş Portföy",
+      "asset_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg/330px-T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg.png",
+      "asset_price": "12.004511",
+      "asset_ratio": "0.12"
+    }
+  ]
+}

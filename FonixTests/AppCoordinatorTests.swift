@@ -13,7 +13,7 @@ final class AppCoordinatorTests: XCTestCase {
     func test_start_setsRootController() {
         let navigation = UINavigationController()
         let coordinator = AppCoordinator(navigationController: navigation,
-                                         dependencies: AppDependencies())
+                                         dependencies: AppDependencies.live())
 
         coordinator.start()
 

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
@@ -20,12 +19,14 @@ protocol APIRequest {
     var path: String { get }
     var method: HTTPMethod { get }
     var parameters: [String: Any] { get }
+    var queryItems: [String: String] { get }
     var requiresAuth: Bool { get }
 }
 
 extension APIRequest {
     var method: HTTPMethod { .post }
     var parameters: [String: Any] { [:] }
+    var queryItems: [String: String] { [:] }
     var requiresAuth: Bool { true }
 }
 
