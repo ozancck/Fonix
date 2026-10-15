@@ -20,3 +20,4 @@ final class AppCoordinatorTests: XCTestCase {
         XCTAssertEqual(navigation.viewControllers.count, 1)
     }
 }
+
