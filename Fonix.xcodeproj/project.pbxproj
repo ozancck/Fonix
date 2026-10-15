@@ -94,6 +94,7 @@
 				AB0A8EBC3080BAC800721779 /* Sources */,
 				AB0A8EBD3080BAC800721779 /* Frameworks */,
 				AB0A8EBE3080BAC800721779 /* Resources */,
+				AB0A8F7B3080CD1100721779 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -184,6 +185,19 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AB0A8F7B3080CD1100721779 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = (
+				"if [[ \"$(uname -m)\" == arm64 ]]; then export PATH=\"/opt/homebrew/bin:$PATH\"; fi",
+				"if which swiftlint > /dev/null; then swiftlint; else echo \"warning: SwiftLint kurulu değil\"; fi",
+				"",
+			);
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB0A8EBC3080BAC800721779 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -214,6 +228,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LD92982N8X;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fonix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -245,6 +260,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LD92982N8X;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fonix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
