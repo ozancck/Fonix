@@ -6,6 +6,10 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AB0A8F743080C4A300721779 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = AB0A8F733080C4A300721779 /* SDWebImage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		AB0A8ED73080BACA00721779 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -53,17 +57,13 @@
 			path = FonixTests;
 			sourceTree = "<group>";
 		};
-		AB0A8EE33080BACA00721779 /* FonixUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FonixUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AB0A8EBD3080BAC800721779 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				AB0A8F743080C4A300721779 /* SDWebImage in Frameworks */,
 			);
 		};
 		AB0A8ED33080BACA00721779 /* Frameworks */ = {
@@ -84,7 +84,6 @@
 			children = (
 				AB0A8EC23080BAC800721779 /* Fonix */,
 				AB0A8ED93080BACA00721779 /* FonixTests */,
-				AB0A8EE33080BACA00721779 /* FonixUITests */,
 				AB0A8EC13080BAC800721779 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +115,9 @@
 				AB0A8EC23080BAC800721779 /* Fonix */,
 			);
 			name = Fonix;
+			packageProductDependencies = (
+				AB0A8F733080C4A300721779 /* SDWebImage */,
+			);
 			productName = Fonix;
 			productReference = AB0A8EC03080BAC800721779 /* Fonix.app */;
 			productType = "com.apple.product-type.application";
@@ -154,9 +156,6 @@
 			dependencies = (
 				AB0A8EE23080BACA00721779 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				AB0A8EE33080BACA00721779 /* FonixUITests */,
-			);
 			name = FonixUITests;
 			productName = FonixUITests;
 			productReference = AB0A8EE03080BACA00721779 /* FonixUITests.xctest */;
@@ -194,6 +193,9 @@
 			);
 			mainGroup = AB0A8EB73080BAC800721779;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AB0A8F723080C4A300721779 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AB0A8EC13080BAC800721779 /* Products */;
 			projectDirPath = "";
@@ -559,6 +561,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB0A8F723080C4A300721779 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB0A8F733080C4A300721779 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB0A8F723080C4A300721779 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB0A8EB83080BAC800721779 /* Project object */;
 	validationLevel = 1;

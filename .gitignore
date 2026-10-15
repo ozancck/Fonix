@@ -1,0 +1,18 @@
+# Xcode kullanıcı verisi
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad
+
+# Derleme çıktıları
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# SPM
+.swiftpm/
+.build/
+
+# macOS
+.DS_Store
