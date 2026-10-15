@@ -18,19 +18,11 @@
 			remoteGlobalIDString = AB0A8EBF3080BAC800721779;
 			remoteInfo = Fonix;
 		};
-		AB0A8EE13080BACA00721779 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB0A8EB83080BAC800721779 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AB0A8EBF3080BAC800721779;
-			remoteInfo = Fonix;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AB0A8EC03080BAC800721779 /* Fonix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fonix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0A8ED63080BACA00721779 /* FonixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FonixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB0A8EE03080BACA00721779 /* FonixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FonixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -71,11 +63,6 @@
 			files = (
 			);
 		};
-		AB0A8EDD3080BACA00721779 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			files = (
-			);
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,7 +80,6 @@
 			children = (
 				AB0A8EC03080BAC800721779 /* Fonix.app */,
 				AB0A8ED63080BACA00721779 /* FonixTests.xctest */,
-				AB0A8EE03080BACA00721779 /* FonixUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,24 +129,6 @@
 			productReference = AB0A8ED63080BACA00721779 /* FonixTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AB0A8EDF3080BACA00721779 /* FonixUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB0A8EEF3080BACA00721779 /* Build configuration list for PBXNativeTarget "FonixUITests" */;
-			buildPhases = (
-				AB0A8EDC3080BACA00721779 /* Sources */,
-				AB0A8EDD3080BACA00721779 /* Frameworks */,
-				AB0A8EDE3080BACA00721779 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AB0A8EE23080BACA00721779 /* PBXTargetDependency */,
-			);
-			name = FonixUITests;
-			productName = FonixUITests;
-			productReference = AB0A8EE03080BACA00721779 /* FonixUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,10 +143,6 @@
 						CreatedOnToolsVersion = 27.0;
 					};
 					AB0A8ED53080BACA00721779 = {
-						CreatedOnToolsVersion = 27.0;
-						TestTargetID = AB0A8EBF3080BAC800721779;
-					};
-					AB0A8EDF3080BACA00721779 = {
 						CreatedOnToolsVersion = 27.0;
 						TestTargetID = AB0A8EBF3080BAC800721779;
 					};
@@ -203,7 +167,6 @@
 			targets = (
 				AB0A8EBF3080BAC800721779 /* Fonix */,
 				AB0A8ED53080BACA00721779 /* FonixTests */,
-				AB0A8EDF3080BACA00721779 /* FonixUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,11 +178,6 @@
 			);
 		};
 		AB0A8ED43080BACA00721779 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			files = (
-			);
-		};
-		AB0A8EDE3080BACA00721779 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -237,11 +195,6 @@
 			files = (
 			);
 		};
-		AB0A8EDC3080BACA00721779 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			files = (
-			);
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -249,11 +202,6 @@
 			isa = PBXTargetDependency;
 			target = AB0A8EBF3080BAC800721779 /* Fonix */;
 			targetProxy = AB0A8ED73080BACA00721779 /* PBXContainerItemProxy */;
-		};
-		AB0A8EE23080BACA00721779 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AB0A8EBF3080BAC800721779 /* Fonix */;
-			targetProxy = AB0A8EE13080BACA00721779 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -485,46 +433,6 @@
 			};
 			name = Release;
 		};
-		AB0A8EF03080BACA00721779 /* Debug configuration for PBXNativeTarget "FonixUITests" */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LD92982N8X;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ozan.fonix.FonixUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Fonix;
-			};
-			name = Debug;
-		};
-		AB0A8EF13080BACA00721779 /* Release configuration for PBXNativeTarget "FonixUITests" */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LD92982N8X;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ozan.fonix.FonixUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Fonix;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -549,14 +457,6 @@
 			buildConfigurations = (
 				AB0A8EED3080BACA00721779 /* Debug configuration for PBXNativeTarget "FonixTests" */,
 				AB0A8EEE3080BACA00721779 /* Release configuration for PBXNativeTarget "FonixTests" */,
-			);
-			defaultConfigurationName = Release;
-		};
-		AB0A8EEF3080BACA00721779 /* Build configuration list for PBXNativeTarget "FonixUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB0A8EF03080BACA00721779 /* Debug configuration for PBXNativeTarget "FonixUITests" */,
-				AB0A8EF13080BACA00721779 /* Release configuration for PBXNativeTarget "FonixUITests" */,
 			);
 			defaultConfigurationName = Release;
 		};
