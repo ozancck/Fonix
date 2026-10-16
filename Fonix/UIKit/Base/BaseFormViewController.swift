@@ -112,7 +112,6 @@ class BaseFormViewController: BaseViewController {
             zero.priority = .defaultLow
             zero.isActive = true
         }
-        
         let container = UIStackView(arrangedSubviews: [headerStack, tableView, footerStack])
         container.axis = .vertical
         view.addSubview(container)

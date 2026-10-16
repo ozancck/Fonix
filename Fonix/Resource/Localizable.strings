@@ -22,3 +22,7 @@
 "asset_type_currency" = "Döviz";
 "error_network" = "Bağlantı kurulamadı. İnternetini kontrol et.";
 "error_generic" = "Bir şeyler ters gitti.";
+"required_field" = "%@ alanı boş bırakılamaz.";
+"invalid_email" = "Geçerli bir e-posta adresi gir.";
+"select" = "Seç";
+"selection_required" = "Bir seçim yapmalısın.";

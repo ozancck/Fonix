@@ -20,7 +20,9 @@ final class HomeViewModel: BaseViewModel {
     private let service: FundServicing
     private weak var navigator: HomeNavigating?
 
-    init(service: FundServicing, navigator: HomeNavigating?, formatter: AmountFormatter = AmountFormatter()) {
+    init(service: FundServicing,
+         navigator: HomeNavigating?,
+         formatter: AmountFormatter = AmountFormatter()) {
         self.service = service
         self.navigator = navigator
         self.formatter = formatter

@@ -27,7 +27,7 @@ final class HomeViewController: BaseFormViewController {
         guard viewModel.state == .loaded else { return }
         let formatter = viewModel.formatter
 
-        // MARK: - Portföyüm
+        //////////////////////////// MARK: - Portföyüm
 
         viewModels.append(SectionLabelCellViewModel(title: "home_portfolio_title".localized))
 
@@ -41,8 +41,6 @@ final class HomeViewController: BaseFormViewController {
                                                     value: formatter.moneyString(asset.totalAmount),
                                                     ratio: formatter.percentString(asset.totalPercentage),
                                                     isGain: true)
-             
-                
                 if let url = asset.iconURL {
                     row.image = ImageAttribute(source: .remote(url))
                 }
@@ -63,7 +61,7 @@ final class HomeViewController: BaseFormViewController {
             viewModels.append(banner)
         }
 
-        // MARK: - En çok kazandıranlar
+        //////////////////////////// MARK: - En çok kazandıranlar
 
         let earnersHeader = SectionLabelCellViewModel(title: "home_top_earners_title".localized,
                                                       actionTitle: "see_all".localized)
@@ -76,7 +74,7 @@ final class HomeViewController: BaseFormViewController {
             viewModels.append(ContainerCellViewModel(viewModels: assetRows(viewModel.topEarners)))
         }
 
-        // MARK: - Favorilerim
+        //////////////////////////// MARK: - Favorilerim
 
         viewModels.append(SectionLabelCellViewModel(title: "home_favorites_title".localized))
 

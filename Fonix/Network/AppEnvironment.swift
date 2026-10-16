@@ -7,13 +7,11 @@
 
 import Foundation
 
-
 enum AppEnvironment {
     case development
     case production
 
     static var current: AppEnvironment {
-        //App Transport Security Settings sözlüğü altında Allows Local Networking = YES.
         #if DEBUG
         return .development
         #else

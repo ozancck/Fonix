@@ -24,6 +24,10 @@ final class ImageAttribute {
         self.init(source: .asset(name), tintColor: tintColor)
     }
 
+    convenience init(systemName name: String, tintColor: AppColor? = nil) {
+        self.init(source: .system(name), tintColor: tintColor)
+    }
+
     var isEmpty: Bool { source == nil }
 
     func apply(to imageView: UIImageView) {
@@ -36,6 +40,8 @@ final class ImageAttribute {
         case .asset(let name):
             let image = AppImage.named(name)
             imageView.image = tintColor == nil ? image : image?.withRenderingMode(.alwaysTemplate)
+        case .system(let name):
+            imageView.image = UIImage(systemName: name)
         case .remote(let url):
             imageView.sd_setImage(with: url, placeholderImage: AppImage.named("CryptoLogo"))
         case nil:
