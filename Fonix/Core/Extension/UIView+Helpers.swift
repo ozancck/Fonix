@@ -47,7 +47,6 @@ extension UIStackView {
             view.removeFromSuperview()
         }
     }
-    
     func pinToEdges(of parent: UIView) {
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

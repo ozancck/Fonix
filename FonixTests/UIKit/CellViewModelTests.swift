@@ -35,6 +35,27 @@ final class CellViewModelTests: XCTestCase {
         XCTAssertEqual(stack?.arrangedSubviews.count, 1)
     }
 
+    func test_container_keepsChildCells_soTapsReachDelegate() {
+        final class Spy: IconInfoCardCellViewModelDelegate {
+            var taps = 0
+            func iconInfoCardTapped(_ viewModel: IconInfoCardCellViewModel) { taps += 1 }
+        }
+        let spy = Spy()
+        let child = IconInfoCardCellViewModel(assetCode: "AFT", title: "", subtitle: "", value: "", ratio: "", isGain: true)
+        child.actionDelegate = spy
+        let container = ContainerCellViewModel(viewModels: [child])
+        let cell = container.makeCell()!
+
+        autoreleasepool { cell.set(viewModel: container) }
+
+        XCTAssertEqual(container.cells.count, 1)
+        XCTAssertNotNil(child.cell)
+        let button = container.cells[0].contentView.subviews.compactMap { $0 as? UIButton }.first
+            ?? container.cells[0].contentView.subviews.flatMap { $0.subviews }.compactMap { $0 as? UIButton }.first
+        button?.sendActions(for: .touchUpInside)
+        XCTAssertEqual(spy.taps, 1)
+    }
+
     func test_xibCells_loadByConvention() {
         XCTAssertNotNil(SectionLabelCellViewModel(title: "x").makeCell())
         XCTAssertNotNil(IconInfoCardCellViewModel(assetCode: "x", title: "", subtitle: "", value: "", ratio: "", isGain: true).makeCell())

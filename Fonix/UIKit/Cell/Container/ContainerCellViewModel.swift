@@ -12,6 +12,7 @@ final class ContainerCellViewModel: BaseCellViewModel {
     var viewModels: [BaseCellViewModel]
     var containerBackgroundColor: UIColor = AppColor.gray80.uiColor
     var cornerRadius: CGFloat = 16
+    var cells = [BaseTableViewCell]()
 
     init(viewModels: [BaseCellViewModel] = []) {
         self.viewModels = viewModels
@@ -35,6 +36,7 @@ final class ContainerCellViewModel: BaseCellViewModel {
 
     override func clearViewModel() {
         viewModels.forEach { $0.clearViewModel() }
+        cells.removeAll()
         super.clearViewModel()
     }
 }
@@ -78,11 +80,13 @@ final class ContainerTableViewCell: BaseTableViewCell {
         edgeConstraints[3].constant = -inset.right
 
         stack.removeAllArrangedSubviews()
+        viewModel.cells.removeAll()
         for child in viewModel.viewModels where child.visible {
             guard let cell = child.makeCell() else { continue }
             child.reloadDelegate = viewModel.reloadDelegate
             child.cell = cell
             cell.set(viewModel: child)
+            viewModel.cells.append(cell)
             stack.addArrangedSubview(cell.contentView)
         }
     }

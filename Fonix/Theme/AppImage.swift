@@ -10,6 +10,7 @@ import UIKit
 
 enum ImageSource: Equatable {
     case asset(String)
+    case system(String)
     case remote(URL)
 }
 

@@ -24,7 +24,6 @@ final class IconInfoCardTableViewCell: BaseTableViewCell {
         containerView.backgroundColor = .clear
     }
 
-
     override func set(viewModel: BaseCellViewModel) {
         super.set(viewModel: viewModel)
         guard let viewModel = viewModel as? IconInfoCardCellViewModel else { return }
