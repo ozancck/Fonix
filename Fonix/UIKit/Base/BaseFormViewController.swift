@@ -16,6 +16,8 @@ class BaseFormViewController: BaseViewController {
     var viewModels = [BaseCellViewModel]()
     var headerViewModels = [BaseCellViewModel]()
     var footerViewModels = [BaseCellViewModel]()
+    var headerCells = [BaseTableViewCell]()
+    var footerCells = [BaseTableViewCell]()
 
     private var refreshControl: UIRefreshControl?
 
@@ -53,8 +55,8 @@ class BaseFormViewController: BaseViewController {
         headerViewModels.removeAll()
         footerViewModels.removeAll()
         prepareViewModels()
-        fill(stack: headerStack, with: headerViewModels)
-        fill(stack: footerStack, with: footerViewModels)
+        headerCells = fill(stack: headerStack, with: headerViewModels)
+        footerCells = fill(stack: footerStack, with: footerViewModels)
         tableView.reloadData()
     }
 
@@ -81,6 +83,8 @@ class BaseFormViewController: BaseViewController {
         viewModels.removeAll()
         headerViewModels.removeAll()
         footerViewModels.removeAll()
+        headerCells.removeAll()
+        footerCells.removeAll()
     }
 
     private var allViewModels: [BaseCellViewModel] {
@@ -132,15 +136,18 @@ class BaseFormViewController: BaseViewController {
         }
     }
 
-    private func fill(stack: UIStackView, with viewModels: [BaseCellViewModel]) {
+    private func fill(stack: UIStackView, with viewModels: [BaseCellViewModel]) -> [BaseTableViewCell] {
         stack.removeAllArrangedSubviews()
+        var cells = [BaseTableViewCell]()
         for viewModel in viewModels {
             guard let cell = viewModel.makeCell() else { continue }
             viewModel.reloadDelegate = self
             viewModel.cell = cell
             cell.set(viewModel: viewModel)
+            cells.append(cell)
             stack.addArrangedSubview(cell.contentView)
         }
+        return cells
     }
 
     private func hideKeyboardWhenTapped() {

@@ -13,6 +13,8 @@ final class HomeViewModel: BaseViewModel {
     private(set) var home: HomeData?
     private(set) var topEarners: [AssetSummary] = []
     private(set) var favorites: [FavoriteAsset] = []
+    private(set) var expandedAssetTypes: Set<String> = []
+    private(set) var selectedEarnerType: String?
 
     var onChange: (() -> Void)?
 
@@ -30,6 +32,33 @@ final class HomeViewModel: BaseViewModel {
 
     var hasPortfolio: Bool { !(home?.userAssets.isEmpty ?? true) }
 
+    var earnerTypes: [String] {
+          var types: [String] = []
+          for earner in topEarners where !types.contains(earner.assetType) {
+              types.append(earner.assetType)
+          }
+          return types
+      }
+
+      var filteredTopEarners: [AssetSummary] {
+          guard let selectedEarnerType else { return topEarners }
+          return topEarners.filter { $0.assetType == selectedEarnerType }
+      }
+
+      func toggleExpanded(assetType: String) {
+          if expandedAssetTypes.contains(assetType) {
+              expandedAssetTypes.remove(assetType)
+          } else {
+              expandedAssetTypes.insert(assetType)
+          }
+          onChange?()
+      }
+
+      func selectEarnerType(_ type: String) {
+          selectedEarnerType = type
+          onChange?()
+      }
+
     func load() async {
         state = .loading
         onChange?()
@@ -40,6 +69,10 @@ final class HomeViewModel: BaseViewModel {
             self.home = try await home
             self.topEarners = try await earners
             self.favorites = try await favorites
+            if selectedEarnerType == nil ||
+                !earnerTypes.contains(selectedEarnerType ?? "") {
+                      selectedEarnerType = earnerTypes.first
+                  }
             state = .loaded
         } catch let error as APIError {
             state = .failed(message(for: error))

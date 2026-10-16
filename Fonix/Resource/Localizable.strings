@@ -26,3 +26,9 @@
 "invalid_email" = "Geçerli bir e-posta adresi gir.";
 "select" = "Seç";
 "selection_required" = "Bir seçim yapmalısın.";
+"home_for_you_title" = "Sana özel";
+"home_topic_intro" = "Fonix'i tanı";
+"home_topic_funds" = "Fonlarda olan biten";
+"home_topic_markets" = "Piyasalar";
+"home_news_title" = "Haberler";
+"asset_quantity" = "adet";
