@@ -109,7 +109,7 @@ final class HomeViewController: BaseFormViewController {
         if viewModel.filteredTopEarners.isEmpty {
             viewModels.append(emptyBanner(title: "home_top_earners_empty".localized))
         } else {
-            viewModels.append(ContainerCellViewModel(viewModels: assetRows(viewModel.topEarners)))
+            viewModels.append(ContainerCellViewModel(viewModels: assetRows(viewModel.filteredTopEarners)))
         }
 
         //////////////////////////// MARK: - Favorilerim
