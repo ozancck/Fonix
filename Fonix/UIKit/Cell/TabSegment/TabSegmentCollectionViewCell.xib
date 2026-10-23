@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="Tc1-Nu-oIS" customClass="TabSegmentCollectionViewCell" customModule="Fonix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="176" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="176" height="115"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tc2-EV-Evg">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sekme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc3-wh-019">
+                                <rect key="frame" x="16" y="8" width="88" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tc4-bb-bar">
+                                <rect key="frame" x="0.0" y="38" width="120" height="2"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Tc5-hh-bar"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Tc6-Jc-Lrc"/>
+                            <constraint firstItem="Tc3-wh-019" firstAttribute="leading" secondItem="Tc2-EV-Evg" secondAttribute="leading" constant="16" id="Tc7-Ld-zzf"/>
+                            <constraint firstAttribute="trailing" secondItem="Tc3-wh-019" secondAttribute="trailing" constant="16" id="Tc8-OB-B1B"/>
+                            <constraint firstItem="Tc3-wh-019" firstAttribute="top" secondItem="Tc2-EV-Evg" secondAttribute="top" constant="8" id="Tc9-xT-eeg"/>
+                            <constraint firstItem="Tc4-bb-bar" firstAttribute="top" secondItem="Tc3-wh-019" secondAttribute="bottom" constant="8" id="TcA-Zk-Fw5"/>
+                            <constraint firstItem="Tc4-bb-bar" firstAttribute="leading" secondItem="Tc2-EV-Evg" secondAttribute="leading" id="TcB-le-bar"/>
+                            <constraint firstAttribute="trailing" secondItem="Tc4-bb-bar" secondAttribute="trailing" id="TcC-tr-bar"/>
+                            <constraint firstAttribute="bottom" secondItem="Tc4-bb-bar" secondAttribute="bottom" id="TcD-bo-bar"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="TcE-kF-mxF"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Tc2-EV-Evg" secondAttribute="trailing" id="TcF-f3-cOK"/>
+                <constraint firstItem="Tc2-EV-Evg" firstAttribute="leading" secondItem="Tc1-Nu-oIS" secondAttribute="leading" id="TcG-kW-DGl"/>
+                <constraint firstAttribute="bottom" secondItem="Tc2-EV-Evg" secondAttribute="bottom" id="TcH-VI-DBh"/>
+                <constraint firstItem="Tc2-EV-Evg" firstAttribute="top" secondItem="Tc1-Nu-oIS" secondAttribute="top" id="TcI-kR-S07"/>
+            </constraints>
+            <size key="customSize" width="176" height="115"/>
+            <connections>
+                <outlet property="bottomBarView" destination="Tc4-bb-bar" id="TcJ-dY-6dN"/>
+                <outlet property="containerView" destination="Tc2-EV-Evg" id="TcK-hk-3wK"/>
+                <outlet property="titleLabel" destination="Tc3-wh-019" id="TcL-4C-04w"/>
+            </connections>
+            <point key="canvasLocation" x="219.84732824427479" y="3.1690140845070425"/>
+        </collectionViewCell>
+    </objects>
+</document>

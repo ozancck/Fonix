@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Swinject
 
 final class ExploreCoordinator: Coordinator {
     var parentCoordinator: Coordinator?
@@ -21,7 +22,23 @@ final class ExploreCoordinator: Coordinator {
     }
 
     func start() {
-        let controller = ExploreViewController()
+        let service = dependencies.resolver.resolve(FundServicing.self)!
+        let viewModel = ExploreViewModel(service: service, navigator: self)
+        let controller = ExploreViewController(viewModel: viewModel)
         navigationController.setViewControllers([controller], animated: false)
+    }
+}
+
+extension ExploreCoordinator: ExploreNavigating {
+    func showAssetDetail(assetCode: String) {
+        AppLog.verbose("Fon detayı: \(assetCode)")        // issue #10
+    }
+
+    func showCategory(code: String) {
+        AppLog.verbose("Kategori: \(code)")               // kategori listesi ekranı sonra
+    }
+
+    func showAllFunds(type: TopFundType) {
+        AppLog.verbose("Tüm fonlar: \(type.rawValue)")    // fon listesi ekranı sonra
     }
 }

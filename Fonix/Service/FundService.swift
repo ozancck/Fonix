@@ -11,6 +11,9 @@ protocol FundServicing {
     func homeData() async throws -> HomeData
     func topEarners() async throws -> [AssetSummary]
     func favoriteAssets() async throws -> [FavoriteAsset]
+    func fundCategories() async throws -> [FundCategory]
+    func topFunds(type: TopFundType) async throws -> [AssetSummary]
+    func searchFunds(query: String) async throws -> [AssetSummary]
 }
 
 final class FundService: FundServicing {
@@ -30,5 +33,17 @@ final class FundService: FundServicing {
 
     func favoriteAssets() async throws -> [FavoriteAsset] {
         try await client.send(GetFavoriteAssetsRequest())
+    }
+    
+    func fundCategories() async throws -> [FundCategory] {
+        try await client.send(GetFundCategoriesRequest())
+    }
+
+    func topFunds(type: TopFundType) async throws -> [AssetSummary] {
+        try await client.send(GetTopFundsRequest(type: type))
+    }
+
+    func searchFunds(query: String) async throws -> [AssetSummary] {
+        try await client.send(SearchFundsRequest(query: query))
     }
 }

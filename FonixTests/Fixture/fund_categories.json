@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "message": null,
+  "data": [
+    {
+      "category_id": "1",
+      "category_title": "Hisse Senedi",
+      "category_code": "equity",
+      "category_icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/da/23/b8da23d2-0b92-97f9-8c34-369039ebcc8b/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
+    },
+    {
+      "category_id": "2",
+      "category_title": "Para Piyasası",
+      "category_code": "money_market",
+      "category_icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/12/0e/68/120e681b-8cca-6d63-477a-d4d2d2409782/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-P3-85-220.png/512x512bb.jpg"
+    },
+    {
+      "category_id": "3",
+      "category_title": "Kıymetli Madenler",
+      "category_code": "precious_metals",
+      "category_icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/59/0b/61590bd3-468b-3d63-2fcf-88c3ae72f109/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/512x512bb.jpg"
+    },
+    {
+      "category_id": "4",
+      "category_title": "Borçlanma Araçları",
+      "category_code": "debt",
+      "category_icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/54/71/f6/5471f6c3-45c8-2076-b344-efbdd33fd33e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
+    },
+    {
+      "category_id": "5",
+      "category_title": "Serbest",
+      "category_code": "hedge",
+      "category_icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e5/f8/8d/e5f88df4-bc07-cdfe-d032-d2bf34216e0c/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg"
+    }
+  ]
+}
