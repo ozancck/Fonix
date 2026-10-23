@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="It1-i7-Jjw" customClass="ImageTitleCardTableViewCell" customModule="Fonix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="It1-i7-Jjw" id="It2-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="It3-pr-rWK">
+                        <rect key="frame" x="16" y="0.0" width="288" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="It4-j7-ak2">
+                                <rect key="frame" x="0.0" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="It5-rU-uXM"/>
+                                    <constraint firstAttribute="height" constant="40" id="It6-Tw-CT1"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="It7-DS-b8R">
+                                <rect key="frame" x="56" y="16" width="196" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Başlık" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It8-g5-147">
+                                        <rect key="frame" x="0.0" y="0.0" width="196" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alt başlık" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It9-18-H7g">
+                                        <rect key="frame" x="0.0" y="28" width="196" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ItA-xB-z9r">
+                                <rect key="frame" x="268" y="30" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="ItB-TM-1RU"/>
+                                    <constraint firstAttribute="width" constant="20" id="ItC-GC-gO7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="ItD-l5-dpX"/>
+                            <constraint firstItem="It4-j7-ak2" firstAttribute="leading" secondItem="It3-pr-rWK" secondAttribute="leading" id="ItE-qc-aHJ"/>
+                            <constraint firstItem="It4-j7-ak2" firstAttribute="centerY" secondItem="It3-pr-rWK" secondAttribute="centerY" id="ItF-uh-iC9"/>
+                            <constraint firstItem="It7-DS-b8R" firstAttribute="leading" secondItem="It4-j7-ak2" secondAttribute="trailing" constant="16" id="ItG-5B-X63"/>
+                            <constraint firstItem="It7-DS-b8R" firstAttribute="top" secondItem="It3-pr-rWK" secondAttribute="top" constant="16" id="ItH-1X-5ER"/>
+                            <constraint firstAttribute="bottom" secondItem="It7-DS-b8R" secondAttribute="bottom" constant="16" id="ItI-sp-He9"/>
+                            <constraint firstItem="ItA-xB-z9r" firstAttribute="leading" secondItem="It7-DS-b8R" secondAttribute="trailing" constant="16" id="ItJ-em-opz"/>
+                            <constraint firstAttribute="trailing" secondItem="ItA-xB-z9r" secondAttribute="trailing" id="ItK-3y-iH1"/>
+                            <constraint firstItem="ItA-xB-z9r" firstAttribute="centerY" secondItem="It3-pr-rWK" secondAttribute="centerY" id="ItL-mb-IFz"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItM-af-w4s">
+                        <rect key="frame" x="16" y="0.0" width="288" height="80"/>
+                        <connections>
+                            <action selector="cardTapped:" destination="It1-i7-Jjw" eventType="touchUpInside" id="ItN-rv-Nqb"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="It3-pr-rWK" firstAttribute="top" secondItem="It2-sc-9uM" secondAttribute="top" id="ItO-2y-JSF"/>
+                    <constraint firstItem="It3-pr-rWK" firstAttribute="leading" secondItem="It2-sc-9uM" secondAttribute="leading" constant="16" id="ItP-Zg-MKR"/>
+                    <constraint firstAttribute="trailing" secondItem="It3-pr-rWK" secondAttribute="trailing" constant="16" id="ItQ-Jl-tTR"/>
+                    <constraint firstAttribute="bottom" secondItem="It3-pr-rWK" secondAttribute="bottom" id="ItR-R1-o13"/>
+                    <constraint firstItem="ItM-af-w4s" firstAttribute="centerX" secondItem="It3-pr-rWK" secondAttribute="centerX" id="ItS-qH-L8o"/>
+                    <constraint firstItem="ItM-af-w4s" firstAttribute="centerY" secondItem="It3-pr-rWK" secondAttribute="centerY" id="ItT-uu-Yzg"/>
+                    <constraint firstItem="ItM-af-w4s" firstAttribute="width" secondItem="It3-pr-rWK" secondAttribute="width" id="ItU-AQ-WTQ"/>
+                    <constraint firstItem="ItM-af-w4s" firstAttribute="height" secondItem="It3-pr-rWK" secondAttribute="height" id="ItV-oU-xLe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="ItW-e1-oar"/>
+            <connections>
+                <outlet property="arrowIcon" destination="ItA-xB-z9r" id="ItX-s0-Kev"/>
+                <outlet property="bottomConstraint" destination="ItR-R1-o13" id="ItY-BM-9fI"/>
+                <outlet property="cardImage" destination="It4-j7-ak2" id="ItZ-hh-Ht4"/>
+                <outlet property="cardSubtitle" destination="It9-18-H7g" id="Iu1-TA-9NQ"/>
+                <outlet property="cardTitle" destination="It8-g5-147" id="Iu2-Ni-zks"/>
+                <outlet property="containerView" destination="It3-pr-rWK" id="Iu3-xw-Giv"/>
+                <outlet property="leadingConstraint" destination="ItP-Zg-MKR" id="Iu4-ER-qHb"/>
+                <outlet property="topConstraint" destination="ItO-2y-JSF" id="Iu5-dx-3LD"/>
+                <outlet property="trailingConstraint" destination="ItQ-Jl-tTR" id="Iu6-KT-ves"/>
+            </connections>
+            <point key="canvasLocation" x="16" y="37"/>
+        </tableViewCell>
+    </objects>
+</document>

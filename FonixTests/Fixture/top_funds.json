@@ -1,0 +1,72 @@
+{
+  "success": true,
+  "message": null,
+  "data": [
+    {
+      "asset_id": "6",
+      "asset_code": "MAC",
+      "asset_type": "fund",
+      "asset_title": "MAC",
+      "asset_long_title": "Marmara Capital Hisse Senedi Fonu",
+      "asset_sub_title": "Marmara Capital",
+      "asset_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/c6/84/92c684a4-e1e1-8763-8615-13e660fd5c27/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+      "asset_price": "7.115320",
+      "asset_ratio": "3.05"
+    },
+    {
+      "asset_id": "1",
+      "asset_code": "AFT",
+      "asset_type": "fund",
+      "asset_title": "AFT",
+      "asset_long_title": "Ak Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu",
+      "asset_sub_title": "Ak Portföy",
+      "asset_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8f/38/b9/8f38b950-039d-3d80-5a17-d4fbc16950f9/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/512x512bb.jpg",
+      "asset_price": "48.213456",
+      "asset_ratio": "2.14"
+    },
+    {
+      "asset_id": "4",
+      "asset_code": "YAY",
+      "asset_type": "fund",
+      "asset_title": "YAY",
+      "asset_long_title": "Yapı Kredi Portföy Altın Fonu",
+      "asset_sub_title": "Yapı Kredi Portföy",
+      "asset_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a0/bc/ab/a0bcab29-bc70-d7ab-aee4-d8ccdb0fb9de/AppIconNew-0-0-1x_U007emarketing-0-6-0-sRGB-85-220.png/512x512bb.jpg",
+      "asset_price": "0.912377",
+      "asset_ratio": "1.42"
+    },
+    {
+      "asset_id": "5",
+      "asset_code": "GAF",
+      "asset_type": "fund",
+      "asset_title": "GAF",
+      "asset_long_title": "Garanti Portföy Eurobond Borçlanma Araçları Fonu",
+      "asset_sub_title": "Garanti Portföy",
+      "asset_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7b/d6/5d/7bd65d51-d0b9-7dc3-5914-d59c327ae17b/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+      "asset_price": "0.058214",
+      "asset_ratio": "0.35"
+    },
+    {
+      "asset_id": "3",
+      "asset_code": "IPJ",
+      "asset_type": "fund",
+      "asset_title": "IPJ",
+      "asset_long_title": "İş Portföy Para Piyasası Fonu",
+      "asset_sub_title": "İş Portföy",
+      "asset_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/86/35/4f/86354f49-3b52-125e-ed4e-d1b217000d14/ic_x_app_icon_prod-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "asset_price": "12.004511",
+      "asset_ratio": "0.12"
+    },
+    {
+      "asset_id": "2",
+      "asset_code": "TTE",
+      "asset_type": "fund",
+      "asset_title": "TTE",
+      "asset_long_title": "İş Portföy Teknoloji Hisse Senedi Fonu",
+      "asset_sub_title": "İş Portföy",
+      "asset_image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/86/35/4f/86354f49-3b52-125e-ed4e-d1b217000d14/ic_x_app_icon_prod-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "asset_price": "3.981204",
+      "asset_ratio": "-0.87"
+    }
+  ]
+}

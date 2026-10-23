@@ -68,4 +68,26 @@ final class FundServiceTests: XCTestCase {
             XCTFail("APIError beklenirdi: \(error)")
         }
     }
+    
+    func test_fundCategories_decodesFixture() async throws {
+        StubURLProtocol.respond(status: 200, json: try Fixture.json("fund_categories"))
+
+        let categories = try await service.fundCategories()
+
+        XCTAssertEqual(categories.count, 5)
+        XCTAssertEqual(categories.first?.categoryCode, "equity")
+        XCTAssertEqual(categories.first?.categoryTitle, "Hisse Senedi")
+        XCTAssertNotNil(categories.first?.iconURL)
+    }
+
+    func test_topFunds_decodesFixture_sortedByRatio() async throws {
+        StubURLProtocol.respond(status: 200, json: try Fixture.json("top_funds"))
+
+        let funds = try await service.topFunds(type: .earned)
+
+        XCTAssertEqual(funds.count, 6)
+        XCTAssertEqual(funds.first?.assetCode, "MAC")
+        XCTAssertEqual(funds.last?.assetCode, "TTE")
+        XCTAssertFalse(funds.last?.isGain ?? true)
+    }
 }
